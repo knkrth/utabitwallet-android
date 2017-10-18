@@ -50,12 +50,12 @@
 #if BITCOIN_TESTNET
 
 static const struct { uint32_t height; const char *hash; uint32_t timestamp; uint32_t target; } checkpoint_array[] = {
-    {       0, "0000000059d3bd513436f028bd6b8d238959f77e85e6b5da43b5c607d0bd2d71", 1502698268, 0x1d00ffff },
+     {      0, "00000f8c28f5ed6b3097af0be5d00f8cc240e5715322ee332d05722b539c3019", 1495135892, 0x1e0fffff }
 
 };
 
 static const char *dns_seeds[] = {
-    "dns.utabitdns.com","158.69.250.149","147.135.243.251"
+    "nodea.geysercoin.net","nodeb.geysercoin.net","185.90.163.251"
 };
 
 #else // main net
@@ -63,14 +63,33 @@ static const char *dns_seeds[] = {
 // blockchain checkpoints - these are also used as starting points for partial chain downloads, so they need to be at
 // difficulty transition boundaries in order to verify the block difficulty at the immediately following transition
 static const struct { uint32_t height; const char *hash; uint32_t timestamp; uint32_t target; } checkpoint_array[] = {
-        {       0, "00000000014c99fcb1d0b9c0791b0b048d6fc1f015d5531e825614bc3f6b2da8", 1502698436, 0x1c01d0c9 }
+       
+        {      0, "00000f8c28f5ed6b3097af0be5d00f8cc240e5715322ee332d05722b539c3019", 1495135892, 0x1e0fffff },
+        {   5040, "00000001495ae1d8d7720c0f68dedd52bdbbd83aadf0ef6073c190399f97bd47", 1495486844, 0x1d01c7ba },
+        {  10080, "fd8936b895eb9d8f153482709111eeb94b70d03f0ca95b18ef9a256b52c5d355", 1495857824, 0x1c0108e9 },
+        {  15120, "000000022228aa9ea92dd7147f49012b0ae3f4af9cbf8b39007303cc23f5c87a", 1496221241, 0x1d0235b2 },
+        {  20160, "c8c04ebde74901f02ce97cd6ea74dfa89e58f54aa81a0ce9cf160f2412ade572", 1496554576, 0x1b2af5a4 },
+        {  30240, "00000000129a0f4a7dcde6a082e6614e0cea89d370d21894d3c289d57135ebd8", 1497239251, 0x1c37e3df },
+        {  40320, "548ea4546087997c35b313e5fc128ee2b24ebf5eab113b3a9adef2eb183b0e4b", 1497913424, 0x1b1b06fa },
+        {  50400, "0000000035d2c3f75e06b814cf6d77a47a8b3a87f9fc946b1db591de7702ac7e", 1498688085, 0x1c452337 },
+        {  60480, "beb57b6e2368535e88a0454bea03c0f4f5d8db018820d66e39f83013f288fcae", 1499362336, 0x1b274701 },
+        {  70560, "0000000006fe38e18ecdae866d0d74507e8afa917863899225cb2cbf649a7d4f", 1500085593, 0x1c17a478 },
+        {  80640, "56a4a1cf8c5b4d33af116ab623749dc0ad2be2591d5a6af403ed478eb8ee0137", 1500756320, 0x1b19e913 },
+        {  90720, "0000000006a5748a8f37786d48dfcb6888f5b7ba28a96bcc2a48c9787618c04c", 1501442700, 0x1c092d84 },
+        { 100800, "06ae645b6c49ccdc5e365a714dfa6e05339db97269529dccbc67907824f8e256", 1502115504, 0x1b0b856b },
+        { 110880, "000000000a17be73317431137a8bbf4d4d76870561e62fb6d0c91f5f184bbe1f", 1502835786, 0x1c2b1c6b },
+        { 120960, "607467bb004d572736b5bda72d02de636627ff1a31cead8539a8979b50c47136", 1503510144, 0x1b0f4be7 },
+        { 131040, "00000000080459b6e79af9b63a9f45b4777fb4aec6043ab1bc759191f47b686d", 1504254716, 0x1c69909d },
+        { 141120, "2d3f166f7c788383c0df240fd3b4b6b6354657c38801949313f3aeb3fb67e2a0", 1504928640, 0x1b11609d },
+        { 151200, "000000004346e59c6eb897bd7dcd002ca04777e73df33cd4895f11886a4f735e", 1505711061, 0x1c4bd247 }
+
 };
 
 static const char *dns_seeds[] = {
 
-        "158.69.250.149",
-        "147.135.243.251",
-        "dns.utabitdns.com"
+        "185.90.163.251",
+        "nodea.geysercoin.net",
+        "nodeb.geysercoin.net"
 };
 
 #endif
